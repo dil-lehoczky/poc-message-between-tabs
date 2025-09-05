@@ -1,2 +1,6 @@
+packages:
+  - website-1
+  - website-2
+
 onlyBuiltDependencies:
   - esbuild

@@ -26,7 +26,7 @@ onUnmounted(() => {
 		<div>Index</div>
 		<iframe
 			ref="iframe"
-			src="/embedded-site.html"
+			src="http://localhost:4300/"
 			frameborder="0"
 			style="height: 30vh; border: 1px solid gray"
 		></iframe>

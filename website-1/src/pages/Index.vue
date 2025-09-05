@@ -8,12 +8,13 @@ const broadcastChannel = new BroadcastChannel("test_channel");
 broadcastChannel.addEventListener("message", (event) => {
 	console.log(`message received:`, event);
 
-	if (iframe.value) {
-		iframe.value.contentWindow?.postMessage({
+	iframe.value?.contentWindow?.postMessage(
+		{
 			sender: "application",
 			data: event.data,
-		});
-	}
+		},
+		"https://localhost:4300/"
+	);
 });
 
 onUnmounted(() => {
